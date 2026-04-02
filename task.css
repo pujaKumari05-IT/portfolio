@@ -1,0 +1,209 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+    background: radial-gradient(circle at top, #0f2027, #0b3d2e, #000000);
+    color: #e6f7f5;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar h1 {
+    color: #00ffcc;
+}
+
+.navbar a {
+    color: #e6f7f5;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00ffcc;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 80px;
+}
+
+.hero-text {
+    max-width: 55%;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    color: #00ffcc;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    line-height: 1.7;
+    color: #cceae7;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #00ffcc, #00b894);
+    color: black;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGE */
+.hero-img img {
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,255,200,0.2);
+}
+
+/* STRATEGY */
+.strategy {
+    padding: 80px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 30px;
+    color: #00ffcc;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    margin: 25px auto;
+    width: 75%;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,255,200,0.1);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+th {
+    background: #00ffcc;
+    color: black;
+}
+
+/* HIGHLIGHT */
+.highlight {
+    background: rgba(0,255,200,0.1);
+    padding: 15px;
+    border-left: 4px solid #00ffcc;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: rgba(0,0,0,0.5);
+}
+/* ===================== */
+/* ANIMATIONS */
+/* ===================== */
+
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* NAV LINK HOVER EFFECT */
+.navbar a {
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #00ffcc;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* BUTTON HOVER GLOW */
+.btn:hover {
+    box-shadow: 0 0 20px rgba(0,255,200,0.6);
+}
+
+/* CARD GLOW */
+.card:hover {
+    box-shadow: 0 20px 50px rgba(0,255,200,0.2);
+}
+
+/* IMAGE FLOAT ANIMATION */
+.hero-img img {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
